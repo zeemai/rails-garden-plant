@@ -1,0 +1,13 @@
+
+
+<h1 class="text-center mt-4"><%= @garden.name %></h1>
+<img src="<%= @garden.image_url %>" class="img-fluid">
+
+<%= link_to "Back", gardens_path %>
+
+<%= link_to "Create a plant", new_garden_plant_path(@garden) %>
+
+
+<% @garden.plants.each do |garden| %>
+  <img src="<%= garden.image_url %>" class="img-fluid">
+<% end %>

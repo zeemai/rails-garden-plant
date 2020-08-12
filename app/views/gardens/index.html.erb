@@ -1,0 +1,9 @@
+<h1 class="text-center mt-4">All Garden</h1>
+
+<% @gardens.each do |garden| %>
+  <%= link_to garden_path(garden) do %>
+    <div class="card-category mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= garden.image_url %>)">
+      <%= garden.name %>
+    </div>
+  <% end %>
+<% end %>
